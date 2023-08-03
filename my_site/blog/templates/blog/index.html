@@ -1,8 +1,57 @@
 {% extends "base.html" %}
+{% load static %}
+
 {% block title %}
 My personal blog
 {% endblock %}
 
+{% block css_files %}
+    <link rel="stylesheet" href="{% static 'blog/index.css' %}" />
+{% endblock %}
+
 {% block content %}
-blablalbla
+    <header id="main-navigation">
+        <h1><a href="">Kenneth's Blog</a></h1>
+        <nav>
+            <a href="">All Posts</a>
+        </nav>
+    </header>
+
+    <section id="welcome">
+        <header>
+            <img src="" alt="Kenneth - The Auther of This Blog" />
+            <h2>Kenneth's blog</h2>
+        </header>
+        <p>Hi, I am Kenneth and I love to blog about tech</p>
+    </section>
+
+    <section id="latest-posts">
+        <h2>My Latest Thoughts</h2>
+
+        <ul>
+            <li>
+                <article class="post">
+                    <a href="">
+                        <img src="" alt="Mountain Hiking" />
+                        <div class="post__content">
+                            <h3>Moutain Hiking</h3>
+                            <p>
+                                There's nothing like the views you get when hiking in the mountains. 
+                                I wasn't even prepared what happened when I was enjoying the view!
+                            </p>
+                        </div>
+                    </a>
+                </article>
+            </li>
+        </ul>
+    </section>
+    <section id="about">
+        <h2>What I Do </h2>
+        <p>
+            I love programming, I love to  help othersa and enjoy exploring.
+        </p>
+        <p>
+            My goal is to get fucking rich, richer than anyone
+        </p>
+    </section>
 {% endblock %}
